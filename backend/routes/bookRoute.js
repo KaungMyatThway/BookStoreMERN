@@ -50,7 +50,7 @@ router.post("/", async(request, response) => {
   });
   
   //get book by list 
-  router.get("//:id", async(request, response) => {
+  router.get("/:id", async(request, response) => {
     try {
       const { id } = request.params;
       const book = await Book.findById(id);
@@ -64,7 +64,7 @@ router.post("/", async(request, response) => {
   });
   
   // update book data
-  router.put("//:id", async(request, response) => {
+  router.put("/:id", async(request, response) => {
     try {
       if (
         !request.body.title ||
